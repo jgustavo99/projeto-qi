@@ -5,11 +5,11 @@
             <div class="row">
                 <div class="footer_teaser col-sm-6">
                     <h3>Sobre Nós</h3>
-                    <p><a href="{{ url('/') }}">Donate</a>, é um Portal que possuí campanhas de entidades que atuam XX. Breve descrição do portal aqui!</p>
+                    <p><a href="{{ url('/') }}">App</a>, é um portal que possuí campanhas de entidades sociais. Breve descrição aqui!</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-map-marker"></i> XX - XX</li>
                         <li class="number"><i class="fa fa-phone"></i> (51) XXXX-XXXX</li>
-                        <li><i class="fa fa-envelope"></i> contato@donate.com.br</li>
+                        <li><i class="fa fa-envelope"></i> contato@site.com.br</li>
                     </ul>
                     <div class="space"></div>
                 </div>
@@ -18,9 +18,9 @@
                     <h3>Fale Conosco</h3>
                     <p> Entre em Contato conosco, teremos o maior prazer em atendê-lo! Nos siga nas redes sociais também:</p>
                     <ul class="list-unstyled mt15">
-                        <li><i class="fa fa-facebook"></i> /donate</li>
-                        <li><i class="fa fa-twitter"></i> @donate</li>
-                        <li><i class="fa fa-instagram"></i> /donate</li>
+                        <li><i class="fa fa-facebook"></i> /site</li>
+                        <li><i class="fa fa-twitter"></i> @site</li>
+                        <li><i class="fa fa-instagram"></i> /site</li>
                     </ul>
                     <div class="space"></div>
                 </div>
@@ -30,7 +30,7 @@
 
     <div class="bottom-bar">
         <div class="container">
-            <div class="copyright">@ Copyright {{ date('Y') }} Donate - www.donate.com.br</div>
+            <div class="copyright">@ Copyright {{ date('Y') }} App - www.site.com.br</div>
         </div>
     </div>
 </footer>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Donate - Faça sua doação em uma das campanhas')
+@section('title', 'App - Faça sua doação em uma das campanhas')
 
 @section('content')
     <section id="searchinner" class="margin-top-site">

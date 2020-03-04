@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Donate - Campanha ' . $campaign->title)
+@section('title', 'App - Campanha ' . $campaign->title)
 
 @section('content')
 
