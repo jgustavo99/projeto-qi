@@ -1,78 +1,68 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Projeto QI
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Projeto desenvolvido com o framework Laravel 6.2 (LTS) e PHP 7.2+.
 
-## About Laravel
+Para ser executado é necessário um ambiente com PHP 7.2 ou superior, MySQL e Apache.
+DICA: Se o ambiente a ser instalado for no Windows indico a instalação do pacote Laragon ou Xampp. Para executar os comandos no console é indicado a instalação do Git Bash (Vem incluso no Git).
+O Laragon já vem com todo ambiente mínimo incluindo GIT e Composer. Se for utilizado, uma dica é adicionar os binários no PATH do sistema (http://prntscr.com/revt9n).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Requisítos mínimos
+- GIT
+- Composer
+- Console para executar os comandos (Git Bash ou nativo)
+- Apache 2
+- PHP 7.2 ou superior
+- MySQL 5.7 ou superior
+- Extensões PHP: OpenSSL, PDO, Tokenizer e XML
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Instalação
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Para instalar, acesse via terminal a pasta root dos projetos e execute:
 
-## Learning Laravel
+```sh
+git clone https://github.com/jgustavo99/projeto-qi.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Composer
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Após ser realizado o clone do projeto, acesse a pasta criada (projeto-qi) e execute:
 
-## Laravel Sponsors
+```sh
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Esse comando irá instalar todas as dependências necessárias para a execução da aplicação.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+Todos os passos posteriores devem ser executados DENTRO da pasta do projeto via console.
 
-## Contributing
+### Configurações variáves de ambiente
+Após instalar todas as dependências com o Composer, temos que copiar o arquivo .env.example para configurar as variaveis de ambiente. Após isso executar um comando para gerar a chave KEY da aplicação Laravel.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```sh
+cp .env.example .env && php artisan key:generate
+```
 
-## Code of Conduct
+Após isso, edite o arquivo `.env` usando algum editor de código (Indicado Sublime Text ou Visual Studio Code).
+- `DB_DATABASE` substitua `laravel` pelo nome do banco de dados;
+- `DB_USERNAME` substitua `root` pelo usuário do banco de dados;
+- `DB_PASSWORD` digite a senha de acesso ao banco de dados.
+-
+### Banco de dados
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Após ser feito toda a configuração da aplicação no ambiente é necessário rodar as `migrations` e `seeds`. 
+`Migrations` são classes que contém a estrutra das tabelas e ao serem executadas fazem a criação na base de dados
+`Seeds` são classes que contém inserções de dados para testes ou para produção.
 
-## Security Vulnerabilities
+Executar:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```sh
+php artisan migrate && php artisan db:seed
+```
 
-## License
+### Execução
+Após ser realizado todos os passos anteriores é só acessar a pasta do projeto utilizando algum navegador. LEMBRANDO que deve ser acessado na pasta pública do projeto. Por exemplo:
+`http://localhost/projeto-qi/public`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Qualquer dúvida na execução do ambiente/configuração da aplicação pode me contatar pelos canais:
+- E-mail: joaogustavo.b@hotmail.com
+- WhatsApp: (51) 98297-6373

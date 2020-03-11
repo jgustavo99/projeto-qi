@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Donate - Minhas Doações')
+@section('title', 'App - Minhas Doações')
 
 @section('content')
     <!-- Content Start -->

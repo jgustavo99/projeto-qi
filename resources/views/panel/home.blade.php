@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Donate - Painel')
+@section('title', 'App - Painel')
 
 @section('content')
     <div class="mv100 breadcrumb-container-pages" style="margin-bottom: 30px !important; ">
