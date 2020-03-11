@@ -46,7 +46,7 @@ Após isso, edite o arquivo `.env` usando algum editor de código (Indicado Subl
 - `DB_DATABASE` substitua `laravel` pelo nome do banco de dados;
 - `DB_USERNAME` substitua `root` pelo usuário do banco de dados;
 - `DB_PASSWORD` digite a senha de acesso ao banco de dados.
--
+
 ### Banco de dados
 
 Após ser feito toda a configuração da aplicação no ambiente é necessário rodar as `migrations` e `seeds`. 
