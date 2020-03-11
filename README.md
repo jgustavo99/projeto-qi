@@ -6,7 +6,7 @@ Para ser executado é necessário um ambiente com PHP 7.2 ou superior, MySQL e A
 DICA: Se o ambiente a ser instalado for no Windows indico a instalação do pacote Laragon ou Xampp. Para executar os comandos no console é indicado a instalação do Git Bash (Vem incluso no Git).
 O Laragon já vem com todo ambiente mínimo incluindo GIT e Composer. Se for utilizado, uma dica é adicionar os binários no PATH do sistema (http://prntscr.com/revt9n).
 
-### Requisítos mínimos
+### Requisitos mínimos
 - GIT
 - Composer
 - Console para executar os comandos (Git Bash ou nativo)
